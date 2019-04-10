@@ -40,7 +40,10 @@ function main() {
     canvasElement.setAttribute('width', width);
     canvasElement.setAttribute('height', height);
 
-    setTimeout(buildGameOverScreen, 3000)
+    const game = new Game(canvasElement);
+    game.startLoop();
+
+    setTimeout(buildGameOverScreen, 3000);
   }
 
 
